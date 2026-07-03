@@ -19,6 +19,10 @@ A lightweight, vanilla JavaScript application demonstrating full **CRUD** (Creat
 
 ## 📦 How to Run the Project
 
-1. **Clone the repository:**
+1. **Visit Live Site:**
+  [https://pavankatti-2022.github.io/Javascript-CRUD-Operation/]
+
+
+2. **Clone the repository:**
    ```bash
-   git clone [https://github.com/YOUR-USERNAME/YOUR-REPOSITORY-NAME.git](https://github.com/YOUR-USERNAME/YOUR-REPOSITORY-NAME.git)
+   git clone [https://github.com/pavankatti-2022/Javascript-CRUD-Operation.git]
