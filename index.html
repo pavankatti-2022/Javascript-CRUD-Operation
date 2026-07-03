@@ -12,7 +12,13 @@
 
   <header>
     <h1 class="logo">CRUD Operations</h1>
-    <button class="submit-btn" id="addBtn">Add New Student</button>
+
+    <div class="buttons">
+      <button class="btn submit-btn" id="addBtn">Add New Student</button>
+      <button class="btn submit-btn" id="btn2">Show all Students</button>
+      <button class="btn submit-btn" id="delBtn">Delete all Data</button>
+
+    </div>
   </header>
 
 
@@ -44,16 +50,13 @@
 
       <!-- Course -->
       <select name="course">
-        <option value="BSC(Comp)">B Sc.(Comp)</option>
-        <option value="BCA">BCA</option>
-        <option value="BBA">BBA</option>
-        <option value="BBA">MCA</option>
+        <option value="#" selected>--Select--</option>  <!-- Default -->
       </select>
 
     </div>
 
     <!-- Submit Button -->
-    <button role="button" type="submit" class="submit-btn" id="submitBtn">Add Student</button>
+    <button role="button" type="submit" class="btn submit-btn" id="submitBtn">Add Student</button>
     <span class="close">&times;</span>
   </form>
 
@@ -62,29 +65,21 @@
 
 
   <!-- Table for Rendering -->
-  <table>
-    <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Gender</th>
-      <th>E-mail</th>
-      <th>Course</th>
-      <th>Actions</th>
-    </tr>
+  <table id="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>E-mail</th>
+        <th>Course</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
 
-    <tr>
-      <td>1</td>
-      <td>Pavan</td>
-      <td>32</td>
-      <td>M</td>
-      <td>test@gmail.com</td>
-      <td>L.K.G</td>
-      <td class="actions">
-        <span>Update</span>
-        <span>Delete</span>  
-      </td>
-    </tr>
+    <tbody></tbody>
+
   </table>
 
 

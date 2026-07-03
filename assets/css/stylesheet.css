@@ -10,6 +10,20 @@ header {
   justify-content: space-between;
 }
 
+header .buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+header .buttons button:nth-child(2) {
+  background-color: #01796f;
+}
+
+header .buttons button:nth-child(3) {
+  background-color: #F74F4F;
+}
+
 header .submit-btn {
   margin: 0;
 }
@@ -73,15 +87,6 @@ header .submit-btn {
 
 .submit-btn {
   margin-top: 1rem;
-  display: block;
-  margin-inline: auto;
-  padding: 0.7rem;
-  color: #fff;
-  background-color: chocolate;
-  border-radius: 5px;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
 }
 
 .submit-btn:active {
@@ -108,7 +113,7 @@ header .submit-btn {
 
 
 /* Table */
-table {
+#table {
   margin-top: 2rem;
   width: 70%;
   margin-inline: auto;
@@ -123,12 +128,35 @@ th, td {
 }
 
 td {
+  padding-block: 5px;
   background-color: transparent;
 }
 
 .actions {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
+}
+
+.actions i {
+  border: 1px solid #989898;
+  border-radius: 10px;
+  
+  width: 35px;height: 35px;
+  place-content: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.actions i:first-child {
+  background-color: #005A9E;
+}
+
+.actions i:nth-child(2) {
+  background-color: #C88B29;
+}
+
+.actions i:nth-child(3) {
+  background-color: #F74F4F;
 }
 
