@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD Operation</title>
+
+  <link rel="stylesheet" href="./assets/css/basic.css">
+  <link rel="stylesheet" href="./assets/css/stylesheet.css">
+</head>
+<body>
+
+  <header>
+    <h1 class="logo">CRUD Operations</h1>
+    <button class="submit-btn" id="addBtn">Add New Student</button>
+  </header>
+
+
+
+  <!-- New Student Form -->
+  <form id="studentForm">
+
+    <h2 class="form-title">Add New Student</h2>
+
+    <div class="input-group">
+
+      <!-- Name -->
+      <input type="text" name="name" placeholder="Enter Name" autocomplete="off">
+
+      <!-- Age -->
+      <input type="text" name="age" placeholder="Enter Age" autocomplete="off">
+
+      <!-- Gender -->
+      <div class="gender">   
+        <input type="radio" name="gender" id="male" value="M">
+        <label for="male">Male</label>
+    
+        <input type="radio" name="gender" id="female" value="F">
+        <label for="female">Female</label>
+      </div>
+
+      <!-- Email -->
+      <input type="email" name="email" placeholder="Enter E-mail" autocomplete="off">
+
+      <!-- Course -->
+      <select name="course">
+        <option value="BSC(Comp)">B Sc.(Comp)</option>
+        <option value="BCA">BCA</option>
+        <option value="BBA">BBA</option>
+      </select>
+
+    </div>
+
+    <!-- Submit Button -->
+    <button role="button" type="submit" class="submit-btn" id="submitBtn">Add Student</button>
+    <span class="close">&times;</span>
+  </form>
+
+
+
+
+
+  <!-- Table for Rendering -->
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>E-mail</th>
+      <th>Course</th>
+      <th>Actions</th>
+    </tr>
+
+    <tr>
+      <td>1</td>
+      <td>Pavan</td>
+      <td>32</td>
+      <td>M</td>
+      <td>test@gmail.com</td>
+      <td>L.K.G</td>
+      <td class="actions">
+        <span>Update</span>
+        <span>Delete</span>  
+      </td>
+    </tr>
+  </table>
+
+
+  
+  <!-- Js -->
+  <script type="module" src="./assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+
+/* Header */
+
+header {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+  padding-block: 1rem;
+  padding-inline: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .submit-btn {
+  margin: 0;
+}
+
+
+
+#studentForm {
+  position: relative;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #323232;
+  border-radius: 10px;
+  padding: 1.5rem 1rem ;
+  width: 380px;
+  max-width: 500px;
+  background-color: antiquewhite;
+  z-index: 99;
+  display: none;
+}
+
+#studentForm.active {
+  display: block;
+}
+
+.form-title {
+  margin-bottom: 1rem;
+}
+
+.input-group {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.gender {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid #656565;
+  border-radius: 5px;
+  padding: 1rem 0;
+}
+
+.gender::before {
+  content: "Gender";
+  position: absolute;
+  top: -9px; left: 21px;
+  background-color: antiquewhite;
+  font-size: 13px;
+  padding-inline: 8px;
+}
+
+.gender label{
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  display: block;
+  margin-inline: auto;
+  padding: 0.7rem;
+  color: #fff;
+  background-color: chocolate;
+  border-radius: 5px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-btn:active {
+  background-color: rgb(148, 70, 14);
+}
+
+.close {
+  font-size: 32px;
+  position: absolute;
+  top: 15px; right: 20px;
+  color: #f00;
+  text-align: center;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  user-select: none;
+}
+
+.close:active {
+  transform: scale(0.9);
+}
+
+
+
+
+/* Table */
+table {
+  margin-top: 2rem;
+  width: 70%;
+  margin-inline: auto;
+  border: 1px solid #979797;
+  border-radius: 8px;
+}
+
+th, td {
+  text-align: center;
+  background-color: antiquewhite;
+  line-height: 32px
+}
+
+td {
+  background-color: transparent;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+

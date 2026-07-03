@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap');
+
+* {
+  margin: 0;padding: 0;
+  box-sizing: border-box;
+  font-family: "Google Sans Code", monospace;
+}
+
+
+select {
+  padding-block: 0.5rem;
+
+}
+
+select, input {
+  padding-inline: 5px;
+  line-height: 32px;
+  border: 1px solid #656565;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+input {
+  font-size: 15px;
+  padding-inline: 10px;
+  color: #191919;
+}
+
+input::placeholder {
+  color: #656565;
+  font-size: 15px;
+}
