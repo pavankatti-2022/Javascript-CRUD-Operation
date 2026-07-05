@@ -1,6 +1,7 @@
 
 /* Table */
 #table {
+  position: relative;
   margin-top: 2rem;
   width: 70%;
   margin-inline: auto;

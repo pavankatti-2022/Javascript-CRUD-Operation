@@ -1,19 +1,33 @@
-const validateStudent = (student) => {
-
-  const errors = {}
+const validate = (student) => {
 
   // Name Validation
-  if(typeof(student.name) !== "string" || student.name.length <= 3) {
-    errors.name = "Enter valid Name";    
+  if(student.name === '') {
+    return false;
   }
+
+
+
 
   // Age Validation
-  if(isNaN(student.age) || student.age >= 18 || student.age < 8) {
-    errors.age = "Enter valid Age"
+  if(student.age === '' || isNaN(Number(student.age))) {
+    return false;
+  }
+
+  if(student.age < 6 || student.age > 17) {
+    return false;
   }
 
 
-  return errors;
+  // Gender Validation
+  if(student.gender === null) {
+    return false;
+  }
+
+  
+
+
+
+  return true;
 }
 
 
@@ -26,4 +40,4 @@ const showErrors = (errors) => {
 
 
 
-export { validateStudent, showErrors }
+export { validate, showErrors }

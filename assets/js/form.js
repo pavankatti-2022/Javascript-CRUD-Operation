@@ -1,3 +1,9 @@
+import { showToast, generateId } from "./utils.js";
+import { validate } from "./validation.js";
+
+
+// console.log();
+
 
 // Handle Form Submit Function
 const handleSubmit = (e) => {
@@ -10,6 +16,7 @@ const handleSubmit = (e) => {
   const formData = new FormData(studentForm);
   
   const student = {
+    id: generateId(),
     name: formData.get("name"),
     age: Number(formData.get("age")),
     gender: formData.get("gender"),
@@ -17,13 +24,23 @@ const handleSubmit = (e) => {
     course: formData.get("course")
   }
 
+  const isValid = validate(student)
 
-  // Save in Database
-  students.push(student)
+  // console.log(isValid);
   
 
-  // Update in Local Storage
-  localStorage.setItem("studentList", JSON.stringify(students))
+  if(isValid) {
+    
+    // Save in Database
+    students.push(student)
+    
+    // Update in Local Storage
+    localStorage.setItem("studentList", JSON.stringify(students))
+  
+    showToast("Student added Successfully")
+  }
+
+
 }
 
 

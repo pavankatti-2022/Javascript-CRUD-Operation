@@ -1,5 +1,17 @@
+import { showToast } from "./utils.js"
 
-const resetData = () => localStorage.removeItem('studentList')
+
+
+const resetData = () => {
+
+  const confirmation = confirm('Are you sure you want to delete all Data !!!')
+
+  if(confirmation) {
+    localStorage.removeItem('studentList')
+    showToast('Data Deleted Successfully !')
+  }
+  
+}
 
 
 export { resetData }

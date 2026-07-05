@@ -1,37 +1,21 @@
 
-import { validateStudent, showErrors } from "./validation.js"
-
-
-
-
-const tbody = document.querySelector('#table tbody')
-
-
-
-
-
-
-
-
-
-
-
-
+import { validate, showErrors } from "./validation.js"
 
 
 
 // Show Data in Tables
 const rendorData = () => {
-
+  
+  const tbody = document.querySelector('#table tbody')
   const students = JSON.parse(localStorage.getItem("studentList"))
   
   let rows = "";
   const img = document.createElement('img')
   
   students.forEach(student => {
-
+    
     rows += `
-      <tr>
+    <tr>
         <td>${student.id}</td>
         <td>${student.name}</td>
         <td>${student.age}</td>
@@ -52,10 +36,6 @@ const rendorData = () => {
   tbody.innerHTML = rows;
 
 }
-
-
-
-
 
 
 

@@ -1,7 +1,7 @@
-import { rendorData } from "./functions.js"
+import { rendorData } from "./table.js"
 
 import { courseList, populateCourses } from "./courses.js";
-import { showForm, hideForm } from "./utils.js";
+import { showItem, hideItem, showToast } from "./utils.js";
 import { handleSubmit } from "./form.js";
 import { resetData } from "./storage.js";
 
@@ -19,7 +19,6 @@ const addStudentBtn = document.querySelector("#addBtn"),
 
 
 
-
 // Populate Courses on DOM loaded
 document.addEventListener("DOMContentLoaded", () => {
   populateCourses(courseList)
@@ -30,14 +29,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Show / Hide Form
-addStudentBtn.addEventListener("click", showForm);
-closeBtn.addEventListener('click', hideForm);
+addStudentBtn.addEventListener("click", () => {
+  showItem(studentForm)
+});
+
+closeBtn.addEventListener('click', (e) => {
+  hideItem(e, studentForm)
+});
 
 
 
 
 
-// Add New Syudent on form Submit
+// Add New Student on form Submit
 studentForm.addEventListener("submit", handleSubmit)
 
 // Show all Data
