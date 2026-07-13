@@ -1,8 +1,12 @@
-// Show Form
+import { tbody } from "./dom.js";
+
+
+
+// Show Item
 const showItem = (item) => item.classList.add('active')
 
 
-// Hide Form
+// Hide Item
 const hideItem = (e, item) => {
   e.stopPropagation();
   item.classList.remove('active')
@@ -36,20 +40,17 @@ const showToast = (message) => {
 
 
 // Generate Id
-const generateId = () => {
-  let students = JSON.parse(localStorage.getItem("studentList"))
+// const generateSlNo = () => {
 
-  if(students === null) {
-    return 1;
-  } else {
-    let id = students.length + 1;  
-    return id;
-  }
+//   console.log(tbody.children.length);
+  
+  
 
-}
+// }
 
 
 
 
 
-export { showItem, hideItem, showToast, generateId }
+
+export { showItem, hideItem, showToast }

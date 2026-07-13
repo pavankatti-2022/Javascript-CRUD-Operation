@@ -1,38 +1,40 @@
-
-import { validate, showErrors } from "./validation.js"
-
+import { tbody } from "./dom.js";
 
 
 // Show Data in Tables
-const rendorData = () => {
-  
-  const tbody = document.querySelector('#table tbody')
-  const students = JSON.parse(localStorage.getItem("studentList"))
-  
+const loadStudents = () => {
+
+  const students = JSON.parse(localStorage.getItem('studentList')) || [];
+
   let rows = "";
-  const img = document.createElement('img')
-  
-  students.forEach(student => {
-    
+
+  /*
+    By using index + 1 inside loadStudents, your table will always 
+    re-index itself perfectly as 1, 2, 3... no matter how many students 
+    you add or delete!
+  */
+
+  students.forEach((student, index) => {
+
     rows += `
-    <tr>
-        <td>${student.id}</td>
-        <td>${student.name}</td>
-        <td>${student.age}</td>
-        <td>${student.gender}</td>
-        <td>${student.email}</td>
-        <td>${student.course}</td>
+    <tr data-id="${student.id}">
+        <td name="sl">${index + 1}</td>
+        <td name="name">${student.name}</td>
+        <td name="age">${student.age}</td>
+        <td name="gender">${student.gender}</td>
+        <td name="email">${student.email}</td>
+        <td name="course">${student.course}</td>
         <td>${`
           <div class="actions">
-            <i class="bi bi-eye"></i>
-            <i class="bi bi-pencil-square"></i>
-            <i class="bi bi-trash"></i>
+            <i class="bi bi-eye view"></i>
+            <i class="bi bi-pencil-square edit"></i>
+            <i class="bi bi-trash delete"></i>
           </div>  
         `}</td>
       </tr>
-    `    
+    `
   })
-  
+
   tbody.innerHTML = rows;
 
 }
@@ -40,4 +42,13 @@ const rendorData = () => {
 
 
 
-export { rendorData }
+// Delete Student Functionality
+
+
+
+
+
+
+
+
+export { loadStudents }

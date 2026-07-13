@@ -1,5 +1,5 @@
 
-#studentForm {
+.form {
   position: relative;
   position: absolute;
   top: 50%; left: 50%;
@@ -14,7 +14,7 @@
   display: none;
 }
 
-#studentForm.active {
+.form.active {
   display: block;
 }
 

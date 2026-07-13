@@ -18,7 +18,6 @@
 
     <div class="buttons">
       <button class="btn" id="addBtn">Add New Student</button>
-      <button class="btn" id="btn2">Show all Students</button>
       <button class="btn" id="delBtn">Delete all Data</button>
 
       <button class="toastBtn">show notification</button>
@@ -29,7 +28,7 @@
 
 
   <!-- Student Form -->
-  <form id="studentForm">
+  <form id="studentForm" class="form">
 
     <h2 class="form-title">Add New Student</h2>
 
@@ -37,9 +36,11 @@
 
       <!-- Name -->
       <input type="text" name="name" placeholder="Enter Name" autocomplete="off">
+      <span id="nameErr" class="err"></span>
 
       <!-- Age -->
       <input type="text" name="age" placeholder="Enter Age" autocomplete="off">
+      <span id="ageErr" class="err"></span>
 
       <!-- Gender -->
       <div class="gender">   
@@ -49,19 +50,26 @@
         <input type="radio" name="gender" id="female" value="F">
         <label for="female">Female</label>
       </div>
+      <span id="genderErr" class="err"></span>
 
       <!-- Email -->
       <input type="email" name="email" placeholder="Enter E-mail" autocomplete="off">
+      <span id="emailErr" class="err"></span>
 
       <!-- Course -->
       <select name="course">
         <option value="#" selected>--Select--</option>  <!-- Default -->
       </select>
+      <span id="courseErr" class="err"></span>
 
     </div>
 
     <!-- Submit Button -->
-    <button role="button" type="submit" class="btn submit-btn" id="submitBtn">Add Student</button>
+    <div class="buttons">
+      <button type="submit" class="btn submit-btn" id="submitBtn" name="submit">Add Student</button>
+      <button type="button" class="btn submit-btn" id="clearBtn">Clear</button>
+    </div>
+
     <span class="close">&times;</span>
   </form>
 
@@ -73,7 +81,7 @@
   <table id="table">
     <thead>
       <tr>
-        <th>Id</th>
+        <th>Sl No.</th>
         <th>Name</th>
         <th>Age</th>
         <th>Gender</th>
